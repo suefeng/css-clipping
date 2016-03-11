@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSS Clipping Demo | Sue Feng Design</title>
+	<!-- meta cluster -->
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="default.css">
+</head>
+<body>
+<div class="wrapper">
+    <h1>CSS Clipping Demo</h1>
+    <p>
+        Here's a simple clip-path demo. First there is a a rectangular image. Then when applying a clip-path style on the image, the clip-path cuts away parts of the rectangular image to form a shape. In this case, it's a hexagon. The basic clip-path code is this:
+        <code>
+            clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        </code>
+        As you see, there are 6 coordinates. The coordinates are x and y values from top left to all the points in a clockwise direction.
+    </p>
+    
+    <div class="clip-wrap">
+        <img src="/demos/css-clipping/images/cherry-blossoms-by-sue-feng.jpg" alt="demo-image-clip-path" width="17%" height="17%">
+        <span class="font-large">+</span>
+        <img src="/demos/css-clipping/images/hexagon.jpg" width="17.5%" alt="demo-polygon-clip-path">
+        <span class="font-large">=</span>
+        <img src="/demos/css-clipping/images/cherry-blossoms-by-sue-feng.jpg" alt="demo-clip-path" width="17.5%" height="17.5%" class="clip-hexagon">
+    </div> <!-- /clip-wrap -->
+    <svg class="clip-svg">
+          <defs>
+                <clipPath id="clip-svg-demo" clipPathUnits="objectBoundingBox">
+                      <polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95, 0.25 0.95, 0 0.5" />
+                </clipPath>
+          </defs>   
+    </svg>
+    <p>
+        Here's an example of a star. It has 10 coordinates. The clip-path code looks like this:
+        <code>
+            clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+        </code>
+    </p>
+
+    <div class="clip-wrap">
+        <img src="/demos/css-clipping/images/cherry-blossoms-by-sue-feng.jpg" alt="demo-clip-css" class="clip-star" width="150" height="150">
+    </div>
+    <svg class="clip-svg">
+        <defs>
+            <clipPath id="polygon-clip-star" clipPathUnits="objectBoundingBox">
+                <polygon points="0.5 0, 0.63 0.38, 1 0.38, 0.69 0.59, 0.82 1, 0.5 0.75, 0.18 1, 0.31 0.59, 0 0.38, 0.37 0.38" />
+            </clipPath>
+        </defs>
+    </svg>  
+    <p>
+        Here's an example of a cutout that is hollow in the middle. This one has a css gradient.
+    </p>
+    
+    <div class="clip-wrap">
+        <div class="clip-each clip-border"></div>  
+    </div>
+    
+    <svg class="clip-svg">
+        <defs>
+            <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
+                <polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95, 0.25 0.95, 0 0.5" />
+            </clipPath>
+        </defs>
+    </svg> 
+    
+    <p>
+        Putting together a composition using just one image, you can see how useful css clip-path can be in making something less boxy.
+    </p>
+
+    <div class="wrap">
+        <div class="clip-block">
+            <div class="clip-each clip-solid">
+            <div class="social-share-block">
+                <span class="social-each"><strong>10</strong>
+                </span> <span>&hearts;</span>
+            </div>
+            </div>  
+        </div> <!-- /clip-block -->
+
+        <div class="clip-block">
+            <div class="clip-each clip-gradient">
+                <div class="clip-caption">work</div>
+            </div>    
+            <div class="clip-each clip-border">
+                <div class="clip-caption">life</div>
+            </div>    
+        </div> <!-- /clip-block -->
+
+        <div class="clip-block">
+            <div class="clip-tagline">balance</div>
+        </div> <!-- /clip-block -->
+        
+        <svg class="clip-svg">
+            <defs>
+                <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
+                    <polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95, 0.25 0.95, 0 0.5" />
+                </clipPath>
+            </defs>
+        </svg>  
+
+        <svg class="clip-svg">
+            <defs>
+                <clipPath id="triangle-clip" clipPathUnits="objectBoundingBox">
+                    <polygon points="1 0.03, 0.17 1, 1 1" />
+                </clipPath>
+            </defs>
+        </svg>  
+    </div> <!-- /wrap -->
+</div>
+</body>
+</html>

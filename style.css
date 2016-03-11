@@ -1,0 +1,218 @@
+.wrapper {
+        max-width: 800px; 
+        margin: 40px auto;
+        text-align: center;
+        color: #535353;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .clip-wrap {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    img {
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+
+    .font-large {
+      font-size: 36px;  
+    }
+
+    .clip-svg {
+      width: 0;
+      height: 0;
+    }
+
+    .clip-hexagon {
+      -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      -moz-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      -webkit-clip-path: url("#clip-svg-demo");
+      -moz-clip-path: url("#clip-svg-demo");
+      clip-path: url("#clip-svg-demo");
+    }
+    
+    .clip-star {
+      -webkit-clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+      -moz-clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+      clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+      -webkit-clip-path: url("#polygon-clip-star");
+      -moz-clip-path: url("#polygon-clip-star");
+      clip-path: url("#polygon-clip-star");
+    }
+
+    p {
+      margin: 0 auto 20px;
+      text-align: left;
+      max-width: 520px;
+      line-height: 1.5;
+    }
+    
+    code {
+        display: block;
+        margin: 20px 0;
+        background: #eee;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .wrap {
+      color: #222;
+      font-size: 24px;
+    }
+
+    .clip-block {
+      display: inline-block;
+    }
+
+    .clip-caption {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      text-align: center;
+    }
+
+    .clip-each {
+      display: block;
+      position: relative;
+      -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .clip-each:hover {
+      background-color: #9E566E;
+      -webkit-transition: all 0.25s ease-in;
+      transition: all 0.25s ease-in;
+    }
+
+    .clip-solid {
+      width: 300px;
+      height: 300px;
+      background-image: url("http://suefeng.com/demos/css-clipping/images/cherry-blossoms-by-sue-feng.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #ad6996;
+      background-blend-mode: hard-light;
+      -webkit-transition: all 2.5s linear;
+      -moz-transition: all 2.5s linear;
+      transition: all 2.5s linear;
+      cursor: pointer;
+      top: -13px;
+      position: relative;
+    }
+    
+    .clip-solid:hover {
+        background-color: transparent;
+    }
+
+    .clip-solid:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-clip-path: polygon(100% 3%, 17% 100%, 100% 100%);
+      -moz-clip-path: polygon(100% 3%, 17% 100%, 100% 100%);
+      clip-path: polygon(100% 3%, 17% 100%, 100% 100%);
+      -webkit-clip-path: url("#triangle-clip");
+      -moz-clip-path: url("#triangle-clip");
+      clip-path: url("#triangle-clip");
+      background: #9E566E;
+      z-index: 1;
+      width: 100%;
+      height: 155px;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+      pointer-events: none;
+    }
+
+    .clip-solid:hover:after {
+      height: 0;
+      -webkit-transition: all 0.45s ease-in;
+      -moz-transition: all 0.45s ease-in;
+      transition: all 0.45s ease-in;
+    }
+
+    .clip-solid:hover .social-share-block {
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+    }
+
+    .social-share-block {
+      position: absolute;
+      bottom: 20px;
+      right: 75px;
+      color: #fff;
+      font-size: 70%;
+      z-index: 2;
+    }
+
+    .social-each {
+      font-size: 80%;
+    }
+
+    .clip-gradient {
+      background: #222;
+      width: 160px;
+      height: 160px;
+    }
+
+    .clip-gradient .clip-caption {
+      color: #fff;
+    }
+
+    .clip-border {
+      background: -webkit-linear-gradient(300deg, #fff 0%, #ad6996 50%, #aaa 61%, #ddd 100%);  
+      background: -moz-linear-gradient(300deg, #fff 0%, #ad6996 50%, #aaa 61%, #ddd 100%); 
+      background: linear-gradient(150deg, #fff 0%,#ad6996 50%,#aaa 61%,#ddd 100%);
+      width: 160px;
+      height: 160px;
+      margin-top: 7px;
+      color: #222;
+      cursor: pointer;
+    }
+    .clip-border:hover {
+        background: #ad6996;
+    }
+    .clip-border::after {
+      content: "";
+      position: absolute;
+      top: 4%;
+      left: 4%;
+      right: 4%;
+      bottom: 4%;
+      margin: 0 auto;  
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      transition: all 0.3s linear;
+      -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      -moz-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      -webkit-clip-path: url("#hexagon-clip");
+      -moz-clip-path: url("#hexagon-clip");
+      clip-path: url("#hexagon-clip");
+      z-index: -1;
+      background-color: #fff;
+    }
+
+    .clip-tagline {
+      display: block;
+      color: #758C9B;
+      cursor: pointer;
+      text-align: center;
+      top: -154px;
+      position: relative;
+    }
